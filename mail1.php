@@ -5,20 +5,14 @@ require ('PHPMailer.php');
 require ('SMTP.php');
 
 
-    $firstname = $_POST["fname"];
     $email= $_POST["email"];
-    $text= $_POST["message"];
-    $phone= $_POST["phone"];
     
 
 
     $message ='<table style="width:100%">
         <tr>
-            <td>'.$firstname.'  '.$laststname.'</td>
         </tr>
         <tr><td>Email: '.$email.'</td></tr>
-        <tr><td>phone: '.$phone.'</td></tr>
-        <tr><td>Text: '.$text.'</td></tr>
         
     </table>';
 
@@ -37,10 +31,9 @@ require ('SMTP.php');
     $mail->Subject = "Test";
     $mail->Body = $message;
     $mail->AddAddress("vinni95@ukr.net");
-	$mail->AddAddress("zl@studyso.at");
 if(!$mail->send()) {
   echo 'Message was not sent.';
   echo 'Mailer error: ' . $mail->ErrorInfo;
 } else {
-  echo 'Сообщение отправлено';
+  echo 'Message has been sent.';
 }

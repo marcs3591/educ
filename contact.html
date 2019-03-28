@@ -44,25 +44,17 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
-					<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+					<a href="index.html"><img src="../educ/logo.png"/></a>
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li class="menu-active"><a href="courses.html">Courses</a></li>
-						<li class="menu-has-children"><a href="">Pages</a>
-							<ul>
-								<li><a href="elements.html">Elements</a></li>
-							</ul>
+						<li class="menu-active"><a href="index.html">Главная</a></li>
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">Программы</a></li>
+						
+						<li class="menu-has-children"><a href="#">Блог</a>
 						</li>
-						<li class="menu-has-children"><a href="">Blog</a>
-							<ul>
-								<li><a href="blog-home.html">Blog Home</a></li>
-								<li><a href="blog-single.html">Blog Details</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="contact.html">Связаться </a></li>
 					</ul>
 				</nav><!-- #nav-menu-container -->
 			</div>
@@ -70,16 +62,41 @@
 	</header>
 	<!-- End Header Area -->
 
+<style>
 
-	<!-- Start Banner Area -->
-	<section class="banner-area relative">
-		<div class="container">
-			<div class="row d-flex align-items-center justify-content-center">
+#cont_cont
+{
+height:100px;
+min-height:100px;
+}
+
+#map-wrap{
+margin-top:5px;
+margin-bottom:5px;
+}
+#bot_cont
+{
+margin-top:5px;
+
+}
+
+#qwe
+
+{
+
+}
+
+
+</style>
+	
+	<section class="banner-area relative" id="cont_cont">
+		<div class="container" >
+			<!-- <div class="row d-flex align-items-center justify-content-center">
 				<div class="about-content col-lg-12">
 					<h1 class="text-white">
 							Contact Us
 					</h1>
-					<p>In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of
+					<!--<p>In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of
 						the space telescope.</p>
 					<div class="link-nav">
 						<span class="box">
@@ -89,10 +106,7 @@
 						</span>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="rocket-img">
-			<img src="img/rocket.png" alt="">
+			</div>-->
 		</div>
 	</section>
 	<!-- End Banner Area -->
@@ -101,16 +115,16 @@
 	<section class="contact-page-area section-gap">
 		<div class="container">
 			<div class="row">
-				<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
-				<div class="col-lg-4 d-flex flex-column address-wrap">
+				<div class="map-wrap" id="map-wrap" style="width:100%; height: 10px;" ></div>
+				<div class="col-lg-4 d-flex flex-column address-wrap" id="qwe">
 					<div class="single-contact-address d-flex flex-row">
 						<div class="icon">
 							<span class="lnr lnr-home"></span>
 						</div>
 						<div class="contact-details">
-							<h5>Binghamton, New York</h5>
+							<h5>Украина, Киев</h5>
 							<p>
-								4343 Hinkle Deegan Lake Road
+								02000 Ярославов Вал, 7
 							</p>
 						</div>
 					</div>
@@ -120,7 +134,7 @@
 						</div>
 						<div class="contact-details">
 							<h5>00 (958) 9865 562</h5>
-							<p>Mon to Fri 9am to 6 pm</p>
+							<p>Пн - Пт 9 до 6 </p>
 						</div>
 					</div>
 					<div class="single-contact-address d-flex flex-row">
@@ -128,31 +142,31 @@
 							<span class="lnr lnr-envelope"></span>
 						</div>
 						<div class="contact-details">
-							<h5>support@colorlib.com</h5>
-							<p>Send us your query anytime!</p>
+							<h5>office@studyso.at</h5>
+							<p>Оставьте Ваш запрос в любое время!</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-8">
+				<div class="col-lg-8" id="bot_cont">
 					<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
 						<div class="row">
 							<div class="col-lg-6 form-group">
-								<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
+								<input name="name" placeholder="Ваше имя" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваше имя'"
 								 class="common-input mb-20 form-control" required="" type="text">
 
-								<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''"
-								 onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+								<input name="email" placeholder="Ваш номер телефона" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Ваш номер телефона'" class="common-input mb-20 form-control" required="" type="email">
 
-								<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'"
+								<input name="subject" placeholder="Тема" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Тема'"
 								 class="common-input mb-20 form-control" required="" type="text">
 							</div>
 							<div class="col-lg-6 form-group">
 								<textarea class="common-textarea form-control" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''"
-								 onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
+								 onblur="this.placeholder = 'Ваше сообщение'" required=""></textarea>
 							</div>
 							<div class="col-lg-12">
 								<div class="alert-msg" style="text-align: left;"></div>
-								<button class="primary-btn" style="float: right;">Send Message</button>
+								<button class="primary-btn" style="float: right;">Отправить сообщение</button>
 							</div>
 						</div>
 					</form>
@@ -167,53 +181,50 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Top Products</h4>
+					<h4>Гуманитарные науки</h4>
 					<ul>
-						<li><a href="#">Managed Website</a></li>
-						<li><a href="#">Manage Reputation</a></li>
-						<li><a href="#">Power Tools</a></li>
-						<li><a href="#">Marketing Service</a></li>
+						<li><a href="#">Право</a></li>
+						<li><a href="#">Психология</a></li>
+						<li><a href="#">История</a></li>
+						<li><a href="#">Политология</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Quick Links</h4>
+					<h4>Естественные науки</h4>
 					<ul>
-						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Brand Assets</a></li>
-						<li><a href="#">Investor Relations</a></li>
+						<li><a href="#">Биотехнологии</a></li>
+						<li><a href="#">Медецина</a></li>
+						<li><a href="#">Фармация</a></li>
+						<li><a href="#">Физика</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Течнические специальности</h4>
+					<ul>
+						<li><a href="#">IT</a></li>
+						<li><a href="#">Машиностроение</a></li>
+						<li><a href="#">Архитектура</a></li>
 						<li><a href="#">Terms of Service</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Features</h4>
+					<h4>Творческие специальности</h4>
 					<ul>
-						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Brand Assets</a></li>
-						<li><a href="#">Investor Relations</a></li>
-						<li><a href="#">Terms of Service</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Resources</h4>
-					<ul>
-						<li><a href="#">Guides</a></li>
-						<li><a href="#">Research</a></li>
-						<li><a href="#">Experts</a></li>
-						<li><a href="#">Agencies</a></li>
+						<li><a href="#">Дизайн</a></li>
+						<li><a href="#">Графика</a></li>
+						<li><a href="#">Музыка</a></li>
+						<li><a href="#">Театр</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-4 col-md-6 single-footer-widget">
-					<h4>Newsletter</h4>
-					<p>You can trust us. we only send promo offers,</p>
+					<h4>Новостная рассылка</h4>
+					<p>Мы рассылаем только информацию о выгодных предложенияч</p>
 					<div class="form-wrap" id="mc_embed_signup">
-						<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-						 method="get" class="form-inline">
-							<input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
+						<form id="myForm1" action="mail1.php" method="post" class="form-inline">
+							<input class="form-control" name="email" placeholder="Ваш Email адрес" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваш Email адрес '"
 							 required="" type="email">
-							<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
-							<div style="position: absolute; left: -5000px;">
-								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-							</div>
+							<button class="primary-btn"><span class="lnr lnr-arrow-right"></span></button>
+							
 
 							<div class="info"></div>
 						</form>
@@ -222,12 +233,12 @@
 			</div>
 			<div class="footer-bottom row align-items-center">
 				<p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+StudySo &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 				<div class="col-lg-4 col-md-12 footer-social">
 					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-dribbble"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-g+"></i></a>
 					<a href="#"><i class="fa fa-behance"></i></a>
 				</div>
 			</div>
@@ -236,9 +247,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- End Footer Area -->
 
 	<!-- ####################### Start Scroll to Top Area ####################### -->
-	<div id="back-top">
+	<!--<div id="back-top">
 		<a title="Go to Top" href="#"></a>
-	</div>
+	</div>-->
 	<!-- ####################### End Scroll to Top Area ####################### -->
 
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>

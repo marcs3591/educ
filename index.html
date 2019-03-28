@@ -35,6 +35,9 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	
 </head>
 
 <body>
@@ -44,23 +47,23 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
-					<a href="index.html"><img src="../edu/logo.png"/></a>
+					<a href="index.html"><img src="../educ/logo.png"/></a>
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
+
+<script>
+
+</script>
 						<li class="menu-active"><a href="#">Главная</a></li>
 						<li><a href="#">О нас</a></li>
-						<li><a href="#">Программы</a></li>
-						<li class="#"><a href="">Pages</a>
-							<ul>
-								<li><a href="#">Elements</a></li>
-							</ul>
-						</li>
+						<li>
+	<a id="myLink" onclick="myScript" title="Click to do something" onclick="My();"
+ href="#">Программы</a>
+	</li>
+
+						
 						<li class="menu-has-children"><a href="#">Блог</a>
-							<ul>
-								<li><a href="#">Blog Home</a></li>
-								<li><a href="#">Blog Details</a></li>
-							</ul>
 						</li>
 						<li><a href="#">Связаться </a></li>
 					</ul>
@@ -74,16 +77,111 @@
 {
 margin-top:20px;
 }
+.side
+{
+display: none;
+position: fixed;
+top: 50%;
+transform: translateY(-50%);
+color: #fff;
+font-size: 20px;
+padding: 10px 22px 22px;
+border-radius: 5px;
+font-weight: 600;
+right: 0;
+z-index: 1001;
+background: rgba(0, 0, 0, 0.73);
+min-width: 290px;
+}
 
- br 
+.fixed-btn {
+    position: fixed;
+    background: #9b2031;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    z-index: 1001;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 120%;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.my_form_side {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.btn_send {
+    text-align: center;
+}
+
+.logo
+
+{
+
+max-width:350px;
+}
+
+.map-wrap
+
+{
+margin-bottom:0px;
+}
+
 
 </style>
+
+<div class="fixed-btn scroll" style="display: flex;">Кнопка связи</div>
+
+<div class="side" id="bot_cont">
+    <div class="float-right close_me"><i class="fas fa-times"></i></div>
+	<iframe name="votar" style="display:none;"></iframe>
+    <form class="form-area contact-form" id="myForm1" action="mail.php" method="post" target="votar">
+        <div class="form-group">
+            <label for="firstname">Имя</label>
+            <input type="text" name="name" class="form-control" id="firstname" required="">
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" class="form-control" id="email" required="">
+        </div>
+        <div class="form-group">
+            <label for="phone">Номер телефона</label>
+            <input type="text" name="phone" class="form-control" required="">
+        </div>
+        <div class="form-group">
+            <label for="comment">Комментарий</label>
+            <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+        </div>
+        <div class="col-lg-12">
+								<div class="alert-msg" style="text-align: left;"></div>
+								<button class="primary-btn" style="float: right;">Отправить сообщение</button>
+							</div>
+    </form>
+</div>
 	<!-- Start Banner Area -->
 	<section class="home-banner-area relative">
 		<div class="container">
-			<div class="row fullscreen d-flex align-items-center justify-content-center">
+			<div class="row fullscreen d-flex align-items-center justify-content-center " id="banner1">
 				<div class="banner-content col-lg-8 col-md-12" id="baner">
-					<br><h1 class="wow fadeIn" data-wow-duration="4s">Поможем поступить в зарубежный ВУЗ</h1>
+					<br><h1 class="wow fadeIn" data-wow-duration="4s">Поможем поступить в австрийский ВУЗ</h1>
 					<p class="text-white">
 						Поступление в желаемый ВУЗ необходимо планировать заранее. <br/>Выберите программу обучения.
 					</p>
@@ -94,18 +192,18 @@ margin-top:20px;
 							<button type="submit" class="btn search-btn">Поиск</button>
 						</form>
 					</div>
-					<h4 class="text-white">Топ страны</h4>
+					<h4 class="text-white">Топ ВУЗы</h4>
 
 					<div class="courses pt-20">
-						<a href="#" data-wow-duration="1s" data-wow-delay=".3s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Германия</a>
-						<a href="#" data-wow-duration="1s" data-wow-delay=".6s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Австрия</a>
-						<a href="#" data-wow-duration="1s" data-wow-delay=".9s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Швейцария</a>
-						<a href="#" data-wow-duration="1s" data-wow-delay="1.2s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">США
+						<a href="#" data-wow-duration="1s" data-wow-delay=".3s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Венский университет</a>
+						<a href="#" data-wow-duration="1s" data-wow-delay=".6s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Венский экономический университет</a>
+						<a href="#" data-wow-duration="1s" data-wow-delay=".9s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Венский технический университет</a>
+						<a href="#" data-wow-duration="1s" data-wow-delay="1.2s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Университет Грац
 						</a>
-						<a href="#" data-wow-duration="1s" data-wow-delay="1.5s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Канада</a>
-						<a href="#" data-wow-duration="1s" data-wow-delay="1.8s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Великобритания
+						<a href="#" data-wow-duration="1s" data-wow-delay="1.5s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Течхнический университет Грац</a>
+						<a href="#" data-wow-duration="1s" data-wow-delay="1.8s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Университет BOKU
 						</a>
-						<a href="#" data-wow-duration="1s" data-wow-delay="2.1s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Среднее образование</a>
+						<a href="#" data-wow-duration="1s" data-wow-delay="2.1s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Университет Вебстер</a>
 					</div>
 				</div>
 			</div>
@@ -122,15 +220,15 @@ margin-top:20px;
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-lg-5 col-md-6 about-left">
-					<img class="img-fluid" src="img/about.jpg" alt="">
+					<img class="img-fluid" src="img/about.jpeg" alt="">
 				</div>
 				<div class="offset-lg-1 col-lg-6 offset-md-0 col-md-12 about-right">
 					<h1>
-						Более 2500 программ <br> из ВУЗов 5 стран
+						Более 2500 программ <br> из 12 ВУЗов Австрии
 					</h1>
 					<div class="wow fadeIn" data-wow-duration="1s">
 						<p>
-							Немецкое образование демонстрируют сегодня одни из лучших показателей в системе обучения. Они представляют образование по новейшим стандартам и программам. Все учебные заведения оснащены современными лабораторными материалами, а занятия проводят высококвалифицированные преподаватели и профессора. 
+							Уровень жизни в Австрии традиционно является высоким. Кроме того, столица страны ─ Вена ─ неоднократно признавалась одним из наиболее комфортных и благоприятных для жизни городов мира. Образование в Австрии, также отличается высоким уровнем качества, о чем красноречиво свидетельствуют рейтинговые таблицы высших учебных заведений, которые ежегодно составляют международные аналитические агентства. При этом, обучение в Австрии отличается более выгодной стоимостью, существенно выделяясь на фоне среднеевропейских показателей. Это обстоятельство вдвойне привлекательно для украинских абитуриентов, поскольку Украина входит в число стран, для которых доступны финансовые привилегии при оплате обучения. 
 						</p>
 					</div>
 					<a href="courses.html" class="primary-btn">Посмотреть программы</a>
@@ -150,53 +248,53 @@ margin-top:20px;
 						Вот почему <br> наши клиенты поступают
 					</h1>
 					<div class="wow fadeIn" data-wow-duration="1s">
-						<p>
-							There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think
-							about setting up your own viewing station. In the life of any aspiring astronomer that it is time to buy that first
-							telescope. It’s exciting to think about setting up your own viewing station.
-						</p>
+						<p>В современном мире качественное образование служит прочным фундаментом для стабильной и успешной жизни. Однако не всегда его можно получить в родной стране. Поэтому сегодня отличной альтернативой этому считают учебу за границей, предоставляющее широкие перспективы и возможность построить карьеру в выбранной сфере.
+
+С образовательным агентством StudySo все эти мечты станут реальностью! 
+							Мы проводим индивидуальные консультации, подбираем программу и учебное заведение, сопровождаем в течение всех этапов до и после прибытия в стране обучения, и оказываем поддержку 24/7. В Австрии можно учиться на одном из направлений. Вы уже определились?
+Благодаря разнообразию программ, дешевое обучение детей в странах Европы – не проблема. Обычно родители отдают предпочтение летним лагерям, детским языковым программам и частным школам, благодаря которым учеба за границей превращается для ребенка в увлекательное путешествие.
+
+Почему StudySo?
+
+Агентство StudySo (Украина) – это команда экспертов, которая поможет вам поступить в европейский ВУЗ и получить высококачественное образование за рубежом без проблем.
 					</div>
-					<a href="courses.html" class="primary-btn white">Explore Courses</a>
+					<a href="courses.html" class="primary-btn white">Посмотреть программы</a>
 				</div>
 				<div class="offset-lg-1 col-lg-6">
 					<div class="courses-right">
+						<h1 id="too_b">
+						Программы, которые мы предлагаем.
+					</h1>
 						<div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="col-lg-6 col-md-6 col-sm-12" id="specs">
 								<ul class="courses-list">
 									<li>
 										<a class="wow fadeInLeft" href="#" data-wow-duration="1s" data-wow-delay=".1s">
-											<i class="fa fa-book"></i> Development
-										</a>
+											<i class="fa fa-book"></i>Экономика</a>
 									</li>
 									<li>
 										<a class="wow fadeInLeft" href="#" data-wow-duration="1s" data-wow-delay=".3s">
-											<i class="fa fa-book"></i> IT & Software
-										</a>
+											<i class="fa fa-book"></i>Бизнес</a>
 									</li>
 									<li>
 										<a class="wow fadeInLeft" href="#" data-wow-duration="1s" data-wow-delay=".5s">
-											<i class="fa fa-book"></i> Photography
-										</a>
+											<i class="fa fa-book"></i>Право</a>
 									</li>
 									<li>
 										<a class="wow fadeInLeft" href="#" data-wow-duration="1s" data-wow-delay=".7s">
-											<i class="fa fa-book"></i> Language
-										</a>
+											<i class="fa fa-book"></i>Машиностроение</a>
 									</li>
 									<li>
 										<a class="wow fadeInLeft" href="#" data-wow-duration="1s" data-wow-delay=".9s">
-											<i class="fa fa-book"></i> Life Science
-										</a>
+											<i class="fa fa-book"></i>Политология</a>
 									</li>
 									<li>
 										<a class="wow fadeInLeft" href="#" data-wow-duration="1s" data-wow-delay="1.1s">
-											<i class="fa fa-book"></i> Business
-										</a>
+											<i class="fa fa-book"></i>Управление</a>
 									</li>
 									<li>
 										<a class="wow fadeInLeft" href="#" data-wow-duration="1s" data-wow-delay="1.3s">
-											<i class="fa fa-book"></i> Socoal Science
-										</a>
+											<i class="fa fa-book"></i>Социология</a>
 									</li>
 								</ul>
 							</div>
@@ -204,38 +302,31 @@ margin-top:20px;
 								<ul class="courses-list">
 									<li>
 										<a class="wow fadeInRight" href="#" data-wow-duration="1s" data-wow-delay="1.3s">
-											<i class="fa fa-book"></i> Data Science
-										</a>
+											<i class="fa fa-book"></i>Славистика</a>
 									</li>
 									<li>
 										<a class="wow fadeInRight" href="#" data-wow-duration="1s" data-wow-delay="1.1s">
-											<i class="fa fa-book"></i> Design
-										</a>
+											<i class="fa fa-book"></i>Дизайн</a>
 									</li>
 									<li>
 										<a class="wow fadeInRight" href="#" data-wow-duration="1s" data-wow-delay=".9s">
-											<i class="fa fa-book"></i> Training
-										</a>
+											<i class="fa fa-book"></i>Маркетинг</a>
 									</li>
 									<li>
 										<a class="wow fadeInRight" href="#" data-wow-duration="1s" data-wow-delay=".7s">
-											<i class="fa fa-book"></i> Humanities
-										</a>
+											<i class="fa fa-book"></i>Режиссура</a>
 									</li>
 									<li>
 										<a class="wow fadeInRight" href="#" data-wow-duration="1s" data-wow-delay=".5s">
-											<i class="fa fa-book"></i> Marketing
-										</a>
+											<i class="fa fa-book"></i>IT - разработка</a>
 									</li>
 									<li>
 										<a class="wow fadeInRight" href="#" data-wow-duration="1s" data-wow-delay=".3s">
-											<i class="fa fa-book"></i> Economics
-										</a>
+											<i class="fa fa-book"></i>Data science</a>
 									</li>
 									<li>
 										<a class="wow fadeInRight" href="#s" data-wow-duration="1s" data-wow-delay=".1s">
-											<i class="fa fa-book"></i> Personal Dev
-										</a>
+											<i class="fa fa-book"></i>Экономика предприятия</a>
 									</li>
 								</ul>
 							</div>
@@ -254,10 +345,9 @@ margin-top:20px;
 			<div class="row justify-content-center">
 				<div class="col-lg-8">
 					<div class="section-title text-center">
-						<h1>Features That Make Us Hero</h1>
+						<h1>Почему мы лучшие?</h1>
 						<p>
-							If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for
-							as low as $.17 each.
+							Мы помогаем абитуриентам поехать учиться в Австрию 7 лет и имеем в своем портфолио 200 + успешных поступлений. Мы поможем Вам, выберите ВУЗ, в котором хотите учиться
 						</p>
 					</div>
 				</div>
@@ -265,66 +355,80 @@ margin-top:20px;
 			<div class="feature-inner row">
 				<div class="col-lg-4 col-md-6">
 					<div class="feature-item">
-						<i class="ti-crown"></i>
-						<h4>Architecture</h4>
+						<div class="logo">
+						<img src="img/logo1.png" class="img-fluid" alt="">
+						</div>
+						
+						<h4>University of Vienna</h4>
+
 						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
 							<p>
-								Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do eiusmod tempor incididunt labore.
+								Один из старейших, университетов Европы, основанный в 1365 году. В университете учится около 92 000 студентов что делает его крупнейшим по численности обучающихся студентов ВУЗом немецкоязычного пространства. Главный корпус Венского университета находится на знаменитом кольцевом бульваре Рингштрассе, остальные здания общей численностью свыше 60 разбросаны по разным кварталам города и окрестностям столицы. 
 							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="feature-item">
-						<i class="ti-briefcase"></i>
-						<h4>Interior Design</h4>
+						<div class="logo">
+						<img src="img/logo2.jpeg" class="img-fluid" alt="">
+						</div>
+						<h4>Vienna University of Economics and Business</h4>
 						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
 							<p>
-								Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do eiusmod tempor incididunt labore.
+								Венский университет экономики и бизнеса (Vienna University of Economics and Business) основан в 1898 году и является самым большим образовательным институтом в Евросоюзе в области экономики и бизнеса, социальных наук и бизнес-юриспруденции. Венский университет экономики и бизнеса предоставляет обучение более 25 тысяч студентов из разных стран мира. 
 							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="feature-item">
-						<i class="ti-medall-alt"></i>
-						<h4>Concept Design</h4>
+						<div class="logo">
+						<img src="img/logo3.png" class="img-fluid" alt="">
+						</div>
+						<h4>Vienna university of technology</h4>
 						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
 							<p>
-								Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do eiusmod tempor incididunt labore.
+								Венский технический университет (нем. Technische Universität Wien, сокр. TU Wien) — один из крупных университетов в Вене, основанный в 1815 году. На сегодняшний день в Венском Техническом Университете проходят обучение свыше 23 000 студентов, из которых 20% – граждане других стран. 
 							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="feature-item">
-						<i class="ti-key"></i>
-						<h4>Lifetime Access</h4>
+						<div class="logo">
+						<img src="img/logo4.png" class="img-fluid" alt="">
+						</div>
+						<h4>University of Natural Resources and Life Sciences, Vienna</h4>
 						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
 							<p>
-								Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do eiusmod tempor incididunt labore.
+								Венский университет природных ресурсов и естествознания является учебным и исследовательским учреждением, которое специализируется на возобновляемых ресурсах, необходимых для человеческой жизни.
 							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="feature-item">
-						<i class="ti-files"></i>
-						<h4>Source File Included</h4>
+						<div class="logo">
+						<img src="img/logo5.png" class="img-fluid" alt="">
+						</div>
+						<h4>Modul Vienna University</h4>
 						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
 							<p>
-								Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do eiusmod tempor incididunt labore.
+								Венский университет MODUL расположен в венском районе Каленберг, откуда открывается прекрасный вид на весь город. MODUL является первым университетом в Австрии, который готовит студентов и аспирантов в области туризма и гостиничного бизнеса. В университете Модуль можно получить степень Бакалавра, степень Мастера, а также MBA — Магистр бизнес - администрирования. 
 							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="feature-item">
-						<i class="ti-headphone-alt"></i>
-						<h4>Live Support</h4>
+						<div class="logo">
+						<img src="img/logo6.png" class="img-fluid" alt="">
+						</div>
+						<h4>Webster university Vienna</h4>
 						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
 							<p>
-								Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do eiusmod tempor incididunt labore.
+								Webster University является хорошо известной во всем мире американской школой бизнеса, которая была учреждена в Сен-Льюисе (штат Миссури) в 1915 году. На сегодняшний день этот вуз имеет более 100 кампусов в 7 странах мира, а у себя на родине отнесен обозревателями Forbes к числу ведущих колледжей в сфере бизнес-образования.
 							</p>
 						</div>
 					</div>
@@ -334,17 +438,81 @@ margin-top:20px;
 	</section>
 	<!-- End Feature Area -->
 
+<div class="section-title text-center" id="cus">
+						<h1>Свяжитесь с нами прямо сейчас!</h1>
+</div>
 
+	<section class="contact-page-area section-gap" >
+		<div class="container">
+			<div class="row">
+				<div class="map-wrap" id="map-wrap" style="width:100%; height: 10px;" ></div>
+				<div class="col-lg-4 d-flex flex-column address-wrap" id="qwe">
+					<div class="single-contact-address d-flex flex-row">
+						<div class="icon">
+							<span class="lnr lnr-home"></span>
+						</div>
+						<div class="contact-details">
+							<h5>Украина, Киев</h5>
+							<p>
+								02000 Ярославов Вал, 7
+							</p>
+						</div>
+					</div>
+					<div class="single-contact-address d-flex flex-row">
+						<div class="icon">
+							<span class="lnr lnr-phone-handset"></span>
+						</div>
+						<div class="contact-details">
+							<h5>+38 (093) 917 95 00</h5>
+							<p>Пн - Пт 9 до 6 </p>
+						</div>
+					</div>
+					<div class="single-contact-address d-flex flex-row">
+						<div class="icon">
+							<span class="lnr lnr-envelope"></span>
+						</div>
+						<div class="contact-details">
+							<h5>office@studyso.at</h5>
+							<p>Оставьте Ваш запрос в любое время!</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8" id="bot_cont">
+					<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
+						<div class="row">
+							<div class="col-lg-6 form-group">
+								<input name="name" placeholder="Ваше имя" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваше имя'"
+								 class="common-input mb-20 form-control" required="" type="text">
+
+								<input name="email" placeholder="Ваш номер телефона" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Ваш номер телефона'" class="common-input mb-20 form-control" required="" type="email">
+
+								<input name="subject" placeholder="Тема" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Тема'"
+								 class="common-input mb-20 form-control" required="" type="text">
+							</div>
+							<div class="col-lg-6 form-group">
+								<textarea class="common-textarea form-control" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Ваше сообщение'" required=""></textarea>
+							</div>
+							<div class="col-lg-12">
+								<div class="alert-msg" style="text-align: left;"></div>
+								<button class="primary-btn" style="float: right;">Отправить сообщение</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
 	<!-- Start Faculty Area -->
-	<section class="faculty-area section-gap">
+	<!--<section class="faculty-area section-gap">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-8">
 					<div class="section-title text-center">
-						<h1>Faculty Members</h1>
+						<h1>Наши клиенты о нас</h1>
 						<p>
-							If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for
-							as low as $.17 each.
+							Мы помогли многим клиентам с поступлением. И вот что они о нас говорят. 
 						</p>
 					</div>
 				</div>
@@ -355,11 +523,11 @@ margin-top:20px;
 						<img class="img-fluid" src="img/faculty/f1.jpg" alt="">
 					</div>
 					<div class="meta-text text-center">
-						<h4>Ethel Davis</h4>
-						<p class="designation">Sr. Faculty Data Science</p>
+						<h4>Андрей Гошуляк</h4>
+						<p class="designation">Vienna University of Economics and Business</p>
 						<div class="info wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
 							<p>
-								If you are looking at blank cassettes on the web, you may be very confused at the difference in price.
+								Спасибо агенству стади со за помощь с поступлением.
 							</p>
 						</div>
 						<div class="align-items-center justify-content-center d-flex">
@@ -374,11 +542,11 @@ margin-top:20px;
 						<img class="img-fluid" src="img/faculty/f2.jpg" alt="">
 					</div>
 					<div class="meta-text text-center">
-						<h4>Rodney Cooper</h4>
-						<p class="designation">Sr. Faculty Data Science</p>
+						<h4>Сергей Нетишник</h4>
+						<p class="designation">Vienna university of technology Биотехнологии</p>
 						<div class="info wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
 							<p>
-								If you are looking at blank cassettes on the web, you may be very confused at the difference in price.
+								Сначала поступление казалось очень сложным, но агенство стади со сделали все за меня.
 							</p>
 						</div>
 						<div class="align-items-center justify-content-center d-flex">
@@ -393,11 +561,11 @@ margin-top:20px;
 						<img class="img-fluid" src="img/faculty/f3.jpg" alt="">
 					</div>
 					<div class="meta-text text-center">
-						<h4>Dora Walker</h4>
-						<p class="designation">Sr. Faculty Data Science</p>
+						<h4>Денис Розенберг</h4>
+						<p class="designation">University of Vienna</p>
 						<div class="info wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
 							<p>
-								If you are looking at blank cassettes on the web, you may be very confused at the difference in price.
+								Мне помогли с поступлением, не смотря на плохой бал аттестата. Теберь я студент одного из крупнейших университетов Европы.
 							</p>
 						</div>
 						<div class="align-items-center justify-content-center d-flex">
@@ -412,11 +580,11 @@ margin-top:20px;
 						<img class="img-fluid" src="img/faculty/f4.jpg" alt="">
 					</div>
 					<div class="meta-text text-center">
-						<h4>Lena Keller</h4>
-						<p class="designation">Sr. Faculty Data Science</p>
+						<h4>Марина Чуйко</h4>
+						<p class="designation">Vienna university of technology</p>
 						<div class="info wow fadeIn" data-wow-duration="1s" data-wow-delay=".7s">
 							<p>
-								If you are looking at blank cassettes on the web, you may be very confused at the difference in price.
+								Все хорошо, спасибо
 							</p>
 						</div>
 						<div class="align-items-center justify-content-center d-flex">
@@ -428,12 +596,12 @@ margin-top:20px;
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>-->
 	<!-- End Faculty Area -->
 
 
 	<!-- Start Testimonials Area -->
-	<section class="testimonials-area section-gap">
+	<!--<section class="testimonials-area section-gap">
 		<div class="container">
 			<div class="testi-slider owl-carousel" data-slider-id="1">
 				<div class="item">
@@ -541,7 +709,7 @@ margin-top:20px;
 			</div>
 		</div>
 	</section>
-	<!-- End Testimonials Area -->
+	<!-- End Testimonials Area -->-->
 
 
 	<!-- Start Footer Area -->
@@ -549,53 +717,50 @@ margin-top:20px;
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Top Products</h4>
+					<h4>Гуманитарные науки</h4>
 					<ul>
-						<li><a href="#">Managed Website</a></li>
-						<li><a href="#">Manage Reputation</a></li>
-						<li><a href="#">Power Tools</a></li>
-						<li><a href="#">Marketing Service</a></li>
+						<li><a href="#">Право</a></li>
+						<li><a href="#">Психология</a></li>
+						<li><a href="#">История</a></li>
+						<li><a href="#">Политология</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Quick Links</h4>
+					<h4>Естественные науки</h4>
 					<ul>
-						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Brand Assets</a></li>
-						<li><a href="#">Investor Relations</a></li>
+						<li><a href="#">Биотехнологии</a></li>
+						<li><a href="#">Медецина</a></li>
+						<li><a href="#">Фармация</a></li>
+						<li><a href="#">Физика</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Течнические специальности</h4>
+					<ul>
+						<li><a href="#">IT</a></li>
+						<li><a href="#">Машиностроение</a></li>
+						<li><a href="#">Архитектура</a></li>
 						<li><a href="#">Terms of Service</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Features</h4>
+					<h4>Творческие специальности</h4>
 					<ul>
-						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Brand Assets</a></li>
-						<li><a href="#">Investor Relations</a></li>
-						<li><a href="#">Terms of Service</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Resources</h4>
-					<ul>
-						<li><a href="#">Guides</a></li>
-						<li><a href="#">Research</a></li>
-						<li><a href="#">Experts</a></li>
-						<li><a href="#">Agencies</a></li>
+						<li><a href="#">Дизайн</a></li>
+						<li><a href="#">Графика</a></li>
+						<li><a href="#">Музыка</a></li>
+						<li><a href="#">Театр</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-4 col-md-6 single-footer-widget">
-					<h4>Newsletter</h4>
-					<p>You can trust us. we only send promo offers,</p>
+					<h4>Новостная рассылка</h4>
+					<p>Мы рассылаем только информацию о выгодных предложенияч</p>
 					<div class="form-wrap" id="mc_embed_signup">
-						<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-						 method="get" class="form-inline">
-							<input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
+						<form id="myForm2" action="mail1.php" method="post" class="form-inline">
+							<input class="form-control" name="email" placeholder="Ваш Email адрес" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваш Email адрес '"
 							 required="" type="email">
-							<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
-							<div style="position: absolute; left: -5000px;">
-								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-							</div>
+							<button class="primary-btn"><span class="lnr lnr-arrow-right"></span></button>
+							
 
 							<div class="info"></div>
 						</form>
@@ -604,12 +769,12 @@ margin-top:20px;
 			</div>
 			<div class="footer-bottom row align-items-center">
 				<p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+StudySo &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 				<div class="col-lg-4 col-md-12 footer-social">
 					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-dribbble"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-g+"></i></a>
 					<a href="#"><i class="fa fa-behance"></i></a>
 				</div>
 			</div>
